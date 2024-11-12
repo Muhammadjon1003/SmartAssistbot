@@ -5,9 +5,13 @@ import os
 import asyncio
 from moviepy.editor import VideoFileClip
 import math
+from dotenv import load_dotenv
 
-# Your bot token
-TOKEN = '7011058660:AAF9TuTSpgvmjypMXEBVbkZNKx5b9HxdxLQ'
+# Load environment variables
+load_dotenv()
+
+# Get token from environment variable
+TOKEN = os.getenv('BOT_TOKEN')
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handler for the /start command"""

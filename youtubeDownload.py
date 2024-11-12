@@ -139,7 +139,7 @@ async def download_youtube(url, format_id, is_audio=False):
             'outtmpl': output_template,
             'merge_output_format': 'mp4',
             'prefer_ffmpeg': True,
-            'ffmpeg_location': r'C:\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe',
+            'ffmpeg_location': 'ffmpeg',  # This will use ffmpeg from PATH
             'quiet': True,
         }
 
